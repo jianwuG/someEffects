@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>cokeRotating</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.coke{
+		background-image:url('../../../../images/cokeRotating/rotating.jpg');
+		background-repeat: repeat-x;
+		background-position: 0 10px;
+		animation:animationCoke 15s linear infinite;
+	}
+
+	@keyframes animationCoke{
+		form{
+			background-position: 0 10px
+		}
+		to{
+			background-position: -537px 10px;
+		}
+	}
+</style>
+<body>
+
+<div class="coke">
+	<img src="../../../../images/cokeRotating/coke.jpg" alt="">
+</div>
+
+<div class="changeAnimation">停止/开启</div>
+</body>
+</html>

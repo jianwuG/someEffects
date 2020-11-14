@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="text">
+    <div class="verticalCenter-one div-item">
+        垂直居中方法1
+    </div>
+
+    <div class="verticalCenter-two div-item">
+        垂直居中方法2
+    </div>
+    <div class="verticalCenter-three div-item">
+        垂直居中方法3
+    </div>
+
+    <div class="verticalCenter-four div-item">
+        垂直居中方法4
+    </div>
+</div>
+
+<div class='text-flex'>
+    <div class="verticalCenter-five div-item">
+        垂直居中方法5
+    </div>
+</div>
+
+</body>
+<style type="text/css">
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    .div-item {
+        width: 180px;
+        height: 60px;
+        background: pink;
+    }
+
+    .text {
+        width: 500px;
+        height: 360px;
+        background: #f2f2f2;
+        position: relative;
+        display: table;
+    }
+
+    .text-flex {
+        width: 500px;
+        height: 360px;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .verticalCenter-one {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .verticalCenter-two {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .verticalCenter-three {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0
+
+    }
+
+    .verticalCenter-four {
+        position: absolute;
+        top: 50%;
+        margin-top: -30px;
+    }
+
+</style>
+</html>
