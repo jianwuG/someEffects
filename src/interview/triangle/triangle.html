@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绘制三角形管</title>
+</head>
+<body>
+ <div class="triangle-all-1">
+     <div class="triangle-1 item">
+     </div>
+     <div class="triangle-2 item">
+     </div>
+     <div class="triangle-3 item">
+     </div>
+     <div class="triangle-4 item">
+     </div>
+     <div class="triangle-5 item">
+     </div>
+ </div>
+
+
+<div class="triangle-all-2">
+    <div class="triangle-6 "></div>
+</div>
+
+ <div class="triangle-all-3">
+     <div class="triangle-7"></div>
+ </div>
+</body>
+
+<style>
+    .triangle-all-1{
+        display: flex;
+        flex-direction: row;
+    }
+    .item{
+        margin: 20px;
+    }
+    .triangle-1{
+        width: 0px;
+        height: 0px;
+        border-width: 100px;
+        border-style:solid;
+        border-color:black red pink yellow;
+    }
+    .triangle-2{
+        width: 0px;
+        height: 0px;
+        border-width: 100px;
+        border-style:solid;
+        border-color:black transparent  transparent  transparent ;
+    }
+    .triangle-3{
+        width: 0px;
+        height: 0px;
+        border-width: 100px;
+        border-style:solid;
+        border-color:transparent red  transparent  transparent ;
+    }
+    .triangle-4{
+        width: 0px;
+        height: 0px;
+        border-width: 100px;
+        border-style:solid;
+        border-color:transparent transparent  pink  transparent ;
+    }
+    .triangle-5{
+        width: 0;
+        height: 0;
+        border:100px solid transparent;
+        border-left:100px solid yellow;
+    }
+
+
+    /*通过给任意三边的颜色设置为 transparent 即可分别实现任一方向的三角形。,
+      通过设置某条边的宽度比其它边宽，来调整三角形的高度。*/
+    .triangle-6{
+        width: 0;
+        height: 0;
+        border:100px solid transparent;
+        border-left:100px solid yellow;
+    }
+
+
+    .triangle-all-3{
+        position: relative;
+        width: 300px;
+        height: 100px;
+        background: #ff8605;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, .2);
+    }
+    .triangle-all-3::after {
+        content: '';
+        position: absolute;
+        bottom: -9px;
+        left: 45px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #ff8605;
+    }
+
+</style>
+</html>
