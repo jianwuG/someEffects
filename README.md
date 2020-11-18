@@ -6,9 +6,12 @@
   * [3.2垂直居中方案](src/interview/verticalCenter/verticalCenter.html)
 * [4.绘制三角形](src/interview/triangle/triangle.html)
   * 绘制三角形
-  * 绘制对HUAKUAN
-  * 绘制
+  * [绘制扇形](src/interview/triangle/pieChart.html)
   
   
 ### 工作常用
 * [1.文本超出省略号](src/work/text.html)
+
+
+### 一些效果
+* [1.环形进度条](src/interview/triangle/pieChart.html)

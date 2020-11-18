@@ -2,34 +2,226 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>pie chart</title>
+    <title>画扇形</title>
 </head>
 <body>
-<div class="pieChart-all">
+<div class="pieChart-item">
+    <span>1.1/4 90°扇形</span>
+    <div class="pieChart-all-1"></div>
 </div>
 
+<div class="pieChart-item">
+    <span>2.障眼法实现90°</span>
+    <div class="pieChart-all-2">
+        <div class="pieChart-all-2-item"></div>
+    </div>
+</div>
 
+<div class="pieChart-item">
+    <span>3.skewY</span>
+    <div class="pieChart-all-3">
+        <div class="pieChart-all-3-item"></div>
+    </div>
+</div>
+
+<div class="pieChart-item">
+    <span>4.左右两边+after+transform</span>
+    <div class="pieChart-all-4">
+        <div class="pieChart-all-4-left"></div>
+        <div class="pieChart-all-4-right"></div>
+    </div>
+</div>
+
+<div class="pieChart-item">
+    <span>6.在4基础上环形进度条</span>
+    <div class="pieChart-all-6">
+        <div class="pieChart-all-6-bg">130°</div>
+        <div class="pieChart-all-6-left"></div>
+        <div class="pieChart-all-6-right"></div>
+    </div>
+</div>
+
+<div class="pieChart-item">
+    <span>5.环形进度条</span>
+    <div class="pieChart-all-5">
+        <div class="pieChart-all-5-item"> </div>
+    </div>
+</div>
 </body>
 
 <style>
-    .pieChart-all {
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .pieChart-item {
+        margin: 10px;
+    }
+    .pieChart-item span{
+        margin-bottom: 20px;
+        display: block;
+    }
+    .pieChart-all-1 {
+        width: 50px;
+        height: 50px;
+        border-radius: 0 0 0 50px;
+        background: red;
+    }
+
+    .pieChart-all-2 {
         width: 100px;
         height: 100px;
         border-radius: 50%;
-        background: yellowgreen;
-        background-image: linear-gradient(to right, transparent 50%, red 0);
+        background: red;
+        position: relative;
+        overflow: hidden;
     }
-    .pieChart-all::before {
+
+    .pieChart-all-2-item {width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: #ccc;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        border-left-width: 100px;
+        border-top-width: 100px;
+    }
+
+    .pieChart-all-3 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: red;
+        position: relative;
+        overflow: hidden;
+    }
+
+
+    .pieChart-all-3-item {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: #ccc;
+        position: absolute;
+        top: 50px;
+        left: 80px;
+        border-width: 50px;
+        transform: rotate(-90deg) skewY(-30deg);
+    }
+
+    .pieChart-all-4 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background: #ddd;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .pieChart-all-4-left{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100px;
+        overflow: hidden;
+        background: red;
+    }
+
+
+    .pieChart-all-4-right{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 100px;
+        overflow: hidden;
+    }
+   .pieChart-all-4-right:after{
+       content: '';
+       height: 100px;
+       width: 50px;
+       border-left: 50px solid red;
+       position: absolute;
+       top: 0;
+       right: 0;
+       border-radius: 50px;
+       transform: rotate(-190deg);
+   }
+
+
+    .pieChart-all-5{
+        width: 100px;
+        height: 100px;
+        background: #69c396;
+        border-radius: 50%;
+        position: relative;
+    }
+    .pieChart-all-5-item{
+        width: 80px;
+        height: 80px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+
+    }
+
+
+    .pieChart-all-6 {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background: #ddd;
+        position: relative;
+        overflow: hidden;
+    }
+    .pieChart-all-6-bg{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: #fff;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 100;
+        text-align: center;
+        line-height: 80px;
+    }
+
+    .pieChart-all-6-left{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 100px;
+        overflow: hidden;
+        background: #69c396;
+    }
+
+
+    .pieChart-all-6-right{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50px;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .pieChart-all-6-right:after{
         content: '';
-        display: block;
-        margin-left: 50%;
-        height: 100%;
-        border-radius: 0 100% 100% 0/50%;
-        background-color: inherit;
-        transform-origin: left;
-        transform: rotate(.2turn);
+        height: 100px;
+        width: 50px;
+        border-left: 50px solid #69c396;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 50px;
+        transform: rotate(-40deg);
     }
-
-
 </style>
 </html>
