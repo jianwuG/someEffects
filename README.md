@@ -9,10 +9,16 @@
   * [绘制扇形](src/interview/triangle/pieChart.html)
   * [svg](src/svgg/svg.html)
 * [5.1px实现，移动端适配方案](src/other/mobile)
+* [6.基础知识](src/interview/basis/基础.md)
+  * 三大特性
+  * 选择器
+  * nth-child和nth-type-child区别
+  * 权重
   
   
 ### 工作常用
 * [1.文本超出省略号](src/work/text.html)
+* [2.首字特别处理](src/work/text.html)
 
 
 ### 一些效果

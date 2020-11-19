@@ -26,6 +26,13 @@
   * 允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性
 
 
+### flex(复合属性)
+ * flex-grow 放大
+   * 按一定比例去瓜分父div未分配的空间
+   * 设置为1 自动填充剩余空间
+ * flex-shrink 缩小 设置为0，即使窗口变小，该div也不会缩小
+   * 某部分不想被压缩，设置为0
+ * flex-basis
 
 
 
@@ -35,3 +42,5 @@
 - [Flex 布局教程：语法篇](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 
 - [Flex 布局教程：实例篇](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html)
+
+- [深入理解 flex-grow、flex-shrink、flex-basis](https://juejin.cn/post/6844904016439148551)
