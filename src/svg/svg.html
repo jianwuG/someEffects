@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--    <circle cx="50" cy="50" r="40" stroke="#ccc"-->
+<!--            stroke-width="20" fill="#ccc"/>-->
+
+<!--    <circle cx="50" cy="50" r="40" stroke="#69c396"-->
+<!--            stroke-width="20" fill="none"-->
+<!--    />-->
+
+<div class="iconFont-div">
+    <div class="iconFont"> 1.图标 任务/订单</div>
+    <svg>
+        <rect x="10" y="10" width="30" height="36" style="fill:white;stroke-width: 1;stroke:black"></rect>
+        <line x1="16" y1="20" x2="32" y2="20" stroke-width="1"></line>
+        <line x1="16" y1="28" x2="32" y2="28" stroke-width="1"></line>
+        <line x1="16" y1="36" x2="32" y2="36" stroke-width="1"></line>
+    </svg>
+</div>
+
+
+<div class="iconFont-div">
+    <div class="iconFont"> 2.垃圾箱</div>
+    <svg>
+
+        <rect x="14" y="4" width="22" height="5" style="fill:white;stroke-width: 1;stroke:black"></rect>
+        <line x1="6" y1="10" x2="44" y2="10" stroke-width="1"></line>
+        <rect x="10" y="10" width="30" height="36" style="fill:white;stroke-width: 1;stroke:black"></rect>
+        <line x1="18" y1="16" x2="18" y2="36" stroke-width="1"></line>
+        <line x1="24" y1="16" x2="24" y2="36" stroke-width="1"></line>
+        <line x1="32" y1="16" x2="32" y2="36" stroke-width="1"></line>
+    </svg>
+</div>
+
+<div class="iconFont-div">
+    <div class="iconFont"> 3.警告标识 ellipse</div>
+    <svg>
+        <ellipse cx="30" cy="30" rx="20" ry="20"></ellipse>
+        <line x1="30" y1="16" x2="30" y2="30" stroke-width="6"></line>
+        <ellipse cx="30" cy="40" rx="4" ry="4" stroke="black"
+                 stroke-width="1" fill="#000"></ellipse>
+    </svg>
+</div>
+
+
+<div class="iconFont-div">
+    <div class="iconFont"> 4.警告标识 circle</div>
+    <svg>
+
+        <circle cx="30" cy="30" r="20" stroke="black"
+                stroke-width="3"></circle>
+        <line x1="30" y1="16" x2="30" y2="30" stroke-width="6"></line>
+        <circle cx="30" cy="40" r="4" stroke="black"
+                stroke-width="1" fill="#000"></circle>
+    </svg>
+</div>
+
+
+<div class="iconFont-div">
+    <div class="iconFont">5.支付成功</div>
+    <svg>
+        <circle cx="30" cy="30" r="20" stroke="#366"
+                stroke-width="3" stroke-linejoin="round"
+                stroke-linecap="round" class="iconFont-success-circle"
+                stroke-dashoffset="0"  stroke-dasharray="125px"></circle>
+        <polyline points="20 32,30 38,40 22" stroke-width="4" stroke="#366" fill="none" stroke-linejoin="round"
+                  stroke-linecap="round" class="iconFont-success-polyline"
+                  stroke-dashoffset="0" stroke-dasharray="200px"
+        >
+
+        </polyline>
+        <!--        <g class="iconFont-line">-->
+        <!--            <line x1="20" y1="32" x2="30" y2="38" stroke-width="6" stroke="#366"></line>-->
+        <!--            <line x1="30" y1="38" x2="40" y2="22" stroke-width="6" stroke="#366"></line>-->
+        <!--        </g>-->
+    </svg>
+</div>
+
+
+<div class="iconFont-div">
+    <div class="iconFont">6.播放</div>
+    <svg>
+        <circle cx="30" cy="30" r="20" stroke="#366"
+                stroke-width="3"></circle>
+        <polygon points="28 24, 28 38, 38 32" stroke-width="2" stroke="#366"/>
+    </svg>
+</div>
+
+
+<div>
+    <svg>
+        <path d="
+  M 18 3
+  L 46 3
+  L 46 40
+  L 61 40
+  L 32 68
+  L 3 40
+  L 18 40
+  Z
+"></path>
+    </svg>
+</div>
+</body>
+<style>
+    body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .iconFont-div {
+        width: 300px;
+        height: 200px;
+
+    }
+
+    .iconFont {
+        margin-bottom: 10px;
+    }
+
+    svg {
+        stroke: #000;
+        stroke-width: 5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+        height: 100px;
+    }
+
+    .iconFont-success-circle{
+        animation:lineCr 1000ms ease-in-out;
+    }
+    @keyframes lineCr {
+        from {
+            stroke-dashoffset:125px
+        }
+        to {
+            stroke-dashoffset:250px
+        }
+    }
+    .iconFont-success-polyline {
+        animation: lineAm 1000ms ease-in-out;
+    }
+
+    @keyframes lineAm {
+        from {
+            stroke-dashoffset: 200px;
+        }
+        to {
+            stroke-dashoffset: 0;
+
+        }
+    }
+</style>
+</html>
