@@ -5,16 +5,45 @@
     <title>Title</title>
 </head>
 <body>
-<div style="width: 200px;height: 200px;">
+<div style="width: 200px;height: 200px;" class="context">
 <!-- stroke-dasharray 虚线长度   75*2*π=471-->
 <!-- stroke-dashoffset 偏移 内圈一半πr=π*70=219  471-219=252 180°   -->
     <svg width="150px" height="150px" class="svg">
         <circle r="70" cy="75" cx="75" stroke-width="8" stroke="#EAEFF4" stroke-linejoin="round" stroke-linecap="round" fill="none"/>
         <circle class="progress" r="70" cy="75" cx="75" stroke-width="8" stroke="#1593FF" fill="none" stroke-dashoffset="252px"  stroke-dasharray="471px" />
     </svg>
+    <div class="progress-text">0%</div>
 </div>
 </body>
+
+<script>
+    var dom=document.getElementsByClassName('progress-text')[0];
+    var num=0,timer;
+    if(num<100){
+         timer= setInterval(()=>{
+            num++;
+            if(num>=100){
+                clearInterval(timer)
+
+            }
+            dom.innerHTML=num+'%';
+        },15)
+    }
+
+</script>
 <style>
+    .context{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .progress-text{
+        position: absolute;
+        top: 38%;
+        left: 30%;
+        transform: translate(50%,50%);
+    }
     svg {
         transform: rotate(-90deg);
     }

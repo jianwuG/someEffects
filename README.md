@@ -7,13 +7,14 @@
 * [4.绘制三角形](src/interview/triangle/triangle.html)
   * 绘制三角形
   * [绘制扇形](src/interview/triangle/pieChart.html)
-  * [svg](src/svgg/svg.html)
+  * [svg绘制图标](src/svg/svg.html)
 * [5.1px实现，移动端适配方案](src/other/mobile)
 * [6.基础知识](src/interview/basis/基础.md)
   * 三大特性
   * 选择器
   * nth-child和nth-type-child区别
   * 权重
+* [重塑和回流](src/other/other/重塑和回流.md)
   
   
 ### 工作常用

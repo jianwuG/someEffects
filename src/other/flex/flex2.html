@@ -5,9 +5,21 @@
     <title>flex2</title>
 </head>
 <body>
-<div class="flex-div">
-    <div class="flex-div-left"></div>
-    <div class="flex-div-right"></div>
+<!--<div class="flex-div">-->
+<!--    <div class="flex-div-left"></div>-->
+<!--    <div class="flex-div-right"></div>-->
+<!--</div>-->
+
+<div class="flex-div-2">
+    <div class="item-div">1</div>
+    <div class="item-div">2</div>
+    <div class="item-div">3</div>
+    <div class="item-div">4</div>
+    <div class="item-div">5</div>
+    <div class="item-div">6</div>
+    <div class="item-div">7</div>
+    <div class="item-div">8</div>
+    <div class="item-div">9</div>
 </div>
 </body>
 <style>
@@ -23,12 +35,28 @@
         height: 100%;
         background: #ccc;
     }
-    .flex-div-right{
-        display: flex;
-        flex:1;
-        height: 100%;
-        background: pink;
+    .flex-div-right{}
 
+    .flex-div-2{
+        display: flex;
+        width: 300px;
+        height: 300px;
+        flex-wrap: wrap;
+        flex-direction: row;
     }
+    .item-div{
+      width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .item-div:nth-child(2n){
+        background: red;
+    }
+    .item-div:nth-child(2n+1){
+        background: #69c396;
+    }
+
 </style>
 </html>
