@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box-shadow"> </div>
+
+<div class="box-shadow-1">卡片悬浮</div>
+
+
+<div class="button">Click This!</div>
+
+
+<div class="box-shadow-animation"></div>
+
+
+<div class="box-ch"></div>
+</body>
+<style>
+    body{
+        background: #ccc;
+    }
+
+    div{
+        margin: 15px;
+    }
+    .box-shadow{
+        width: 100px;
+        height: 50px;
+        background: pink;
+        box-shadow: inset -1px -2px 1px 2px #cccccc;
+    }
+    .box-shadow-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 200px;
+        background: #fff;
+    }
+    .box-shadow-1:hover{
+        box-shadow: 0 2px 6px 0px #1f1d1d;
+    }
+
+    .button{
+        width: 130px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:linear-gradient(#008752, #007849) ;
+        border-radius: 10px;
+        cursor: pointer;
+        /*transition: box-shadow 0.2s ease-in-out;*/
+        box-shadow: 0 8px 0 #004d2f, 0 10px 15px rgba(0,0,0,.35);
+    }
+
+    .button:active{
+        transition: box-shadow 0.4s ease-in-out;
+        box-shadow: 0 4px 0 #004d2f, 0 1px 2px rgba(0,0,0,.25);
+        transform: translateY(6px);
+    }
+
+
+
+    .box-shadow-animation{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: coral;
+        animation: shadowAnimation 2s infinite;
+        box-shadow: 0 0 1px 1px #ccc;
+    }
+    .box-shadow-animation:hover{
+        animation: none;
+    }
+
+    @keyframes shadowAnimation {
+        0%{
+            box-shadow: 0 0 0 0 red;
+
+        }
+        50%{
+            box-shadow: 0 0 2px 2px yellow;
+
+        }
+        100%{
+            box-shadow: 0 0 0 0 red;
+
+        }
+    }
+
+
+    .box-ch{
+        margin: 100px;
+        transform: rotate(45deg);
+        width: 70px;
+        height: 70px;
+        border-radius: 100px 0 0 0;
+        box-shadow: -5px -5px 0 1px red,
+                     -10px -10px 0 6px orange,
+                     -15px -15px 0 11px yellow,
+                     -20px -20px 0 16px green;
+
+    }
+
+</style>
+</html>

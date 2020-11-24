@@ -14,12 +14,21 @@
   * 选择器
   * nth-child和nth-type-child区别
   * 权重
-* [重塑和回流](src/other/other/重塑和回流.md)
+* [7.重塑和回流](src/other/other/重塑和回流.md)
+* [8.Css3](src/Css3/text.md)
+  * 文本效果/文本属性
+  * transition
+  * transform
+  * animation
   
-  
-### 工作常用
+
+
+
+
+### 工作记录
 * [1.文本超出省略号](src/work/text.html)
 * [2.首字特别处理](src/work/text.html)
+* [3.兄弟选择器列表边框处理](src/interview/basis/1.html)
 
 
 ### 一些效果

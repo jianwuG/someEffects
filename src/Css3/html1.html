@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="div0"> 全球最大的中文搜索引擎congratulation、致力于让网民更便捷地获取信息，找到所求。百度超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。</div>
+
+<div class="div1">word-break: break-all 全球最大的中文搜索引擎congratulation、致力于让网民更便捷地获取信息，找到所求。百度超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。</div>
+
+<div class="div2">word-break: keep-all 全球最大的中文搜索引擎congratulation、致力于让网民更便捷地获取信息，找到所求。百度超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。</div>
+
+
+<div class="div3">word-break: normal 全球最大的中文搜索引擎congratulation、致力于让网民更便捷地获取信息，找到所求。百度超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。</div>
+
+<div class="div4">word-wrap normal 全球最大的中文搜索引擎congratulation、致力于让网民更便捷地获取信息，找到所求。百度超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。</div>
+
+<div class="div5">word-wrap: break-word 全球最大的中文搜索引擎congratulation、致力于让网民更便捷地获取信息，找到所求。百度超过千亿的中文网页数据库，可以瞬间找到相关的搜索结果。</div>
+
+</body>
+<style>
+    body{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    div{
+        margin: 10px;
+    }
+    .div0{
+        width: 102px;
+        border: 1px solid red;
+    }
+    .div1 {
+        width: 102px;
+        border: 1px solid red;
+        /*word-break: keep-all;*/
+        word-break: break-all;
+        white-space:normal;
+    }
+    .div2{
+        width: 100px;
+        border: 1px solid red;
+        word-break: keep-all;
+        /*word-break: break-all;*/
+    }
+    .div3{
+        width: 100px;
+        border: 1px solid red;
+        word-break: normal;
+    }
+    .div4{
+        width: 100px;
+        border: 1px solid red;
+        word-wrap: normal;
+    }
+    .div5{
+        width: 100px;
+        border: 1px solid red;
+        word-wrap: break-word;
+        white-space:normal;
+    }
+</style>
+</html>
